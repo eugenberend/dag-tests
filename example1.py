@@ -1,6 +1,6 @@
 import prefect
 from prefect import task, Flow
-from prefect.storage import Local
+from prefect.storage import Git
 
 @task
 def say_hello():
@@ -9,6 +9,3 @@ def say_hello():
 
 with Flow("hello-flow") as flow:
     say_hello()
-
-# Register the flow under the "tutorial" project
-flow.register(project_name="Tutorial",labels=["common-k8s"])
