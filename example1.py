@@ -1,6 +1,5 @@
 import prefect
 from prefect import task, Flow
-from prefect.storage import Git
 
 @task
 def say_hello():
